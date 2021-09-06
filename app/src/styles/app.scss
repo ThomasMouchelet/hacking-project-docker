@@ -1,0 +1,262 @@
+@import "./terminal.scss";
+
+$green: #00ff00;
+$red: rgb(248,108,105);
+$white:rgb(204,204,204);
+$blue: rgb(136,219,253);
+$grey:#333333;
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;700&display=swap');
+
+body{
+    background-color: gray;
+    font-family: 'Inconsolata', monospace;
+}
+*{
+    box-sizing: border-box;
+}
+
+.valid{
+    background-color: green;
+    color: #fff;
+    border: 1px solid rgb(2, 226, 2);
+}
+.tchat{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(139, 139, 139, 0.247);
+    color: $green;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+
+
+    h3{
+        color: $blue;
+        margin: 0;
+    }
+    .arrow{
+        color: $green;
+        margin-left: 10px;
+    }
+    .tild{
+        color: $red;
+        margin:0 10px;
+    }
+    .txt{
+        color: $white;
+    }
+}
+
+.message{
+    opacity: .4;
+}
+.message:hover{
+    opacity: 1;
+}
+.message:last-child() 
+{
+    opacity: 1;
+
+    .txt{
+        
+    }
+}
+
+h1{
+    color: $green;
+    font-weight: 400;
+}
+p{
+    color: $white;
+}
+
+input,textarea{
+    background-color: transparent;
+    border: none;
+    color: $green;
+    padding: 5px 18px;
+    font-size: 1.3em;
+    border: 1px solid rgba(255,255,255,.1);
+    margin-right: 20px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+
+    &::placeholder{
+        color: $white;
+    }
+}
+
+input[type="submit"],button,.btn-success{
+    background-color: $green;
+    border: none;
+    padding: 5px 18px;
+    opacity: .8;
+    font-size: 1.3em;
+    color: $grey;
+    text-decoration: none;
+}
+
+.videoPage .btn-success{
+    margin: 10px 0;
+}
+
+.videoPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="submit"]:disabled,button.valid:disabled{
+    opacity: .1;
+}
+
+input[type="submit"],button:hover{
+    cursor: pointer;
+    opacity: 1;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+.disconnect{
+    background-color: $red;
+    color: $white;
+}
+
+.admin-page{
+    color: $white;
+
+    h2{
+        color: $blue;
+    }
+}
+
+.students{
+    margin-top: 10px;
+    color: $green;
+}
+
+.valid-challenge{
+    color: $white;
+    padding-left: 10px;
+}
+
+.team h3{
+    margin-bottom: 0;
+}
+
+.header-admin{
+    display: flex;
+    align-items: center;
+
+    button{
+        margin-left: 20px;
+    }
+}
+
+.row{
+    display: flex;
+}
+
+.row>*{
+    width: 50%;
+    margin: 0 10px;
+}
+
+.challengeDetails{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+em{
+    color: $red;
+}
+
+.winMod{
+    color: $white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.create-team{
+    color: #fff;
+
+    form{
+        margin-top: 20px;
+    }
+}
+
+body{
+    min-height: 100vh;
+}
+
+.login-page{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.studentList{
+    color: #fff;
+}
+
+.login-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error{
+    opacity: 1;
+    transform: all .3s;
+    color: $red;
+}
+
+ul{
+    color: $white;
+}
+
+@media (max-width: 400px) {
+    *{
+        box-sizing: border-box;
+    }
+    .window{
+        width: 100%;
+    }
+    .window .terminal{
+      width: 100%;
+       flex-direction: column;
+    }
+    h1{
+        font-size: 3em;
+    }
+    p{
+        font-size: 2em;
+    }
+    input, button{
+        margin: 40px 0;
+        width: 100%;
+        font-size: 2em !important;
+    }
+    .header-admin{
+        flex-direction: column;
+
+        button{
+            margin: 15px 0;
+        }
+    }
+    .row {
+        flex-direction: column;
+
+        &>*{
+            width: 100%;
+        }
+    }
+}
