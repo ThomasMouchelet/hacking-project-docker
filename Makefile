@@ -72,7 +72,7 @@ deploy_init:
 	ssh debian@149.202.45.43 'git clone https://github.com/ThomasMouchelet/hacking-project-docker.git && make prod ENV=prod && make jwt_keys'
 	
 .PHONY: dev
-dev: env_dev up install migrations fixtures
+dev: env_dev up install migrations fixtures node_modules
 
 .PHONY: prod
 prod: env_prod file_env_npm up install migrations fixtures
