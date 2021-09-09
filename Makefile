@@ -73,6 +73,10 @@ jwt_keys:
 clear:
 	$(sy) cache:clear
 
+.PHONY:
+build:
+	cd app && npm run build && cd ..
+
 .PHONY: deploy
 deploy:
 	ssh icri5960@109.234.161.72 'cd public_html/hacking-project && git pull origin master && make prod ENV=prod'
@@ -81,4 +85,4 @@ deploy:
 dev: env_dev up install migrations fixtures
 
 .PHONY: prod
-prod: env_prod file_env_npm install_prod node_modules migrations_prod fixtures_prod
+prod: env_prod file_env_npm install_prod node_modules build migrations_prod fixtures_prod
