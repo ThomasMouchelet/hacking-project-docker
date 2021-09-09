@@ -5,7 +5,8 @@ import firebasedb from "../firebasedb";
 // import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 const VideoPage = () => {
-    const [url, setUrl] = useState(`${window.location.origin}/assets/mistert.mp4`)
+    // const [url, setUrl] = useState(`${window.location.origin}/assets/mistert.mp4`)
+    const [url, setUrl] = useState(`https://icri5960.odns.fr/hacking-project/assets/mistert.mp4`)
     const playerRef = useRef()
     const [playing, setPlaying] = useState(false)
     const [controls, setControls] = useState(false)

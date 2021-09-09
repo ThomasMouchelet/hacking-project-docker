@@ -1,10 +1,11 @@
 ifeq ($(ENV), dev)
 	file_env_npm_name := .env.dev
+	de := docker exec teacher-tool-php
 else
 	file_env_npm_name := .env.prod
+	de :=
 endif
 
-de := docker exec teacher-tool-php
 sy := $(de) php bin/console
 dc := docker-compose
 
@@ -19,6 +20,10 @@ up: ## Up docker-compose.yml file
 .PHONY: install
 install: up ## Installer les dépendances symfony
 	$(de) composer install
+
+.PHONY: install_prod
+install_prod: 
+	cd api && composer install && cd ..
 
 .PHONY: node_modules
 node_modules: 
@@ -42,13 +47,9 @@ env_dev:
 
 .PHONY: file_env_npm
 file_env_npm: 
-	cd app && envsubst < $(file_env_npm_name) > .env && cd ..
+	cd app && envsubst < $(file_env_npm_name) > .env && cd .. && 
+	cd api && envsubst < $(file_env_npm_name) > .env && cd .. 
 
-.PHONY: dev
-dev: env_dev up install migrations fixtures
-
-.PHONY: prod
-prod: env_prod file_env_npm up install migrations
 
 .PHONY: reset
 reset: ## Delete all volumes and all images
@@ -62,10 +63,16 @@ help: ## Affiche cette aide
 jwt_keys: 
 	$(de) php bin/console lexik:jwt:generate-keypair --overwrite
 
-.PHONY: deploy
-deploy:
-	ssh debian@149.202.45.43 'cd docker-teacher-tool && git pull origin master && make prod ENV=prod && make jwt_keys'
-	
 .PHONY: clear
 clear:
 	$(sy) cache:clear
+
+.PHONY: deploy
+deploy:
+	ssh icri5960@109.234.161.72 'cd public_html/hacking-project && git pull origin master && make prod ENV=prod'
+
+.PHONY: dev
+dev: env_dev up install migrations fixtures
+
+.PHONY: prod
+prod: env_prod file_env_npm install_prod node_modules migrations fixtures
