@@ -23,7 +23,7 @@ install: up ## Installer les dépendances symfony
 
 .PHONY: install_prod
 install_prod: 
-	cd api && composer install && cd ..
+	cd api && composer update && composer install && cd ..
 
 .PHONY: node_modules
 node_modules: 
