@@ -3,7 +3,7 @@ ifeq ($(ENV), dev)
 	de := docker exec teacher-tool-php
 else
 	file_env_npm_name := .env.prod
-	de :=
+	de := 
 endif
 
 sy := $(de) php bin/console
@@ -33,9 +33,17 @@ node_modules:
 migrations: install ## Génère les tables dans la base de données
 	$(de) php bin/console doctrine:migrations:migrate -q
 
+.PHONY: migrations_prod
+migrations_prod: ## Génère les tables dans la base de données
+	cd api &&  php bin/console doctrine:migrations:migrate -q && cd ..
+
 .PHONY: fixtures
 fixtures: ## Génèrer des fausses données tables dans la base de données
 	$(de) php bin/console doctrine:fixtures:load -q
+
+.PHONY: fixtures_prod
+fixtures_prod: ## Génèrer des fausses données tables dans la base de données
+	cd api && php bin/console doctrine:fixtures:load -q && cd ..
 
 .PHONY: env_prod
 env_prod: 
@@ -73,4 +81,4 @@ deploy:
 dev: env_dev up install migrations fixtures
 
 .PHONY: prod
-prod: env_prod file_env_npm install_prod node_modules migrations fixtures
+prod: env_prod file_env_npm install_prod node_modules migrations_prod fixtures_prod
