@@ -260,3 +260,30 @@ ul{
         }
     }
 }
+
+.tchat-form{
+    textarea{
+        width: 100%;
+        min-height: 200px;
+    }
+    input{
+        width: 100%;
+    }
+    button{
+        margin-top: 10px;
+        width: 100%;
+    }
+    select{
+        width: 100%;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        color: #00ff00;
+        padding: 5px 18px;
+        font-size: 1.3em;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-right: 20px;
+        font-family: "Inconsolata", monospace;
+        font-weight: 400;
+    }
+}

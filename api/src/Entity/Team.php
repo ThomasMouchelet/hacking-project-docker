@@ -60,6 +60,12 @@ class Team
      */
     private $students;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @Groups({"teams_read"})
+     */
+    private $completedAt;
+
 
     public function __construct()
     {
@@ -173,6 +179,18 @@ class Team
                 $student->setTeam(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCompletedAt(): ?\DateTimeInterface
+    {
+        return $this->completedAt;
+    }
+
+    public function setCompletedAt(?\DateTimeInterface $completedAt): self
+    {
+        $this->completedAt = $completedAt;
 
         return $this;
     }

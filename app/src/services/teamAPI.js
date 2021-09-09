@@ -22,8 +22,20 @@ function getName() {
     }
 }
 
+function updateTeam(teamid){
+    const team = {
+        id: parseInt(teamid),
+        completedAt: new Date()
+    }
+
+    return axios
+        .put(`${TEAM_API}/${team.id}`, team)
+        .then(res => res.data["hydra:member"])
+}
+
 export default {
     findOne,
     findAllTeams,
-    getName
+    getName,
+    updateTeam
 };

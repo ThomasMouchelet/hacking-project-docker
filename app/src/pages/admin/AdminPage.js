@@ -5,6 +5,7 @@ import ShowValidChallenges from "./ShowValidChallenges";
 import ShowChallenges from "./ShowChallenges";
 import AuthAPI from "../../services/authAPI";
 import firebasedb from "../../firebasedb";
+import ValidatedTeamForm from "./ValidatedTeamForm";
 
 const AdminPage = () => {
     const [listTeams, setListTeams] = useState(null)
@@ -79,7 +80,10 @@ const AdminPage = () => {
                 <button onClick={handleReload}>RELOAD DATA</button>
             </div>
 
-            <FormTchat />
+            <div className="row">                
+                <FormTchat />
+                <ValidatedTeamForm />
+            </div>
 
             <div className="row">
                 <div className="challenges-admin">

@@ -24,8 +24,9 @@ const FormTchat = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit} >
-                <input
+            <h2>Envoyer un message</h2>
+            <form onSubmit={handleSubmit} className="tchat-form">
+                <textarea
                     type="text" placeholder="message"
                     onChange={handleChange}
                     value={credentials.message}
