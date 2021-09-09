@@ -40,8 +40,6 @@ services:
     container_name: docker-container-php
     ports:
       - '9000:9000'
-    volumes:
-      - ./api:/var/www/symfony_docker
     depends_on:
       database:
         condition: service_started
