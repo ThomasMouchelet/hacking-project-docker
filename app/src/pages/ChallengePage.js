@@ -57,12 +57,14 @@ const ChallengePage = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        try {
-            await validChallengesAPI.createValidChallenge(challenge.id);
-            setUserAnswer("");
-            getActiveChallenge();
-        } catch (error) {
-            console.log(error)
+        if(answer === userAnswer){
+            try {
+                await validChallengesAPI.createValidChallenge(challenge.id);
+                setUserAnswer("");
+                getActiveChallenge();
+            } catch (error) {
+                console.log(error)
+            }
         }
     }
 

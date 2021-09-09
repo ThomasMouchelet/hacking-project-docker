@@ -36,7 +36,7 @@ const App = () => {
                 snapshot.forEach(doc => {
                     const { message } = doc.data()
                     messages = [...messages, message]
-                    console.log("messages : ", messages)
+                    
                 })
                 if (isAuthenticated) {
                     toast.dark(messages[messages.length - 1], {
