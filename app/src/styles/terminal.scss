@@ -51,7 +51,7 @@ textarea, input, button {
 	background-color: $button-not-focused;
 
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	border-radius: math.div($button-diameter,2);
+	// border-radius: math.div($button-diameter,2);
 
 	color: rgba(0, 0, 0, 0.5);
 }

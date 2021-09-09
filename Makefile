@@ -27,7 +27,7 @@ install_prod:
 
 .PHONY: node_modules
 node_modules: 
-	cd app && npm install && cd ..
+	cd app && npm update && npm install && cd ..
 
 .PHONY: migrations
 migrations: install ## Génère les tables dans la base de données
@@ -85,4 +85,4 @@ deploy:
 dev: env_dev up install migrations fixtures
 
 .PHONY: prod
-prod: env_prod file_env_npm install_prod node_modules build migrations_prod fixtures_prod
+prod: env_prod install_prod migrations_prod fixtures_prod node_modules build
