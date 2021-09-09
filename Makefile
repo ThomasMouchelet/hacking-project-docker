@@ -45,7 +45,7 @@ env_dev:
 
 .PHONY: file_env_npm
 file_env_npm: 
-	cd app && envsubst < $(file_env_npm_name) > .env && cd .. && cd api && envsubst < $(file_env_npm_name) > .env && cd ..
+	cd app && envsubst < $(file_env_npm_name) > .env && cd ..
 
 .PHONY: reset
 reset: ## Delete all volumes and all images
@@ -65,7 +65,7 @@ clear:
 
 .PHONY: deploy
 deploy:
-	ssh debian@149.202.45.43 'cd hacking-project && git pull origin master && make prod ENV=prod && make jwt_keys'
+	ssh debian@149.202.45.43 'cd hacking-project-docker && git pull origin master && make prod ENV=prod && make jwt_keys'
 	
 .PHONY: dev
 dev: env_dev up install migrations fixtures
