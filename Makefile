@@ -1,13 +1,15 @@
 ifeq ($(ENV), dev)
+	compose_file := docker-compose-dev.yml
 	file_env_npm_name := .env.dev
-	de := docker exec teacher-tool-php
 else
+	compose_file := docker-compose-prod.yml
 	file_env_npm_name := .env.prod
-	de := 
 endif
 
+
+de := docker exec docker-container-php
 sy := $(de) php bin/console
-dc := docker-compose
+dc := docker-compose -f $(compose_file)
 
 .PHONY: down
 down: ## Down docker-compose.yml file
@@ -21,10 +23,6 @@ up: ## Up docker-compose.yml file
 install: up ## Installer les dépendances symfony
 	$(de) composer install
 
-.PHONY: install_prod
-install_prod: 
-	cd api && composer update && composer install && cd ..
-
 .PHONY: node_modules
 node_modules: 
 	cd app && npm update && npm install && cd ..
@@ -33,17 +31,9 @@ node_modules:
 migrations: install ## Génère les tables dans la base de données
 	$(de) php bin/console doctrine:migrations:migrate -q
 
-.PHONY: migrations_prod
-migrations_prod: ## Génère les tables dans la base de données
-	cd api &&  php bin/console doctrine:migrations:migrate -q && cd ..
-
 .PHONY: fixtures
 fixtures: ## Génèrer des fausses données tables dans la base de données
 	$(de) php bin/console doctrine:fixtures:load -q
-
-.PHONY: fixtures_prod
-fixtures_prod: ## Génèrer des fausses données tables dans la base de données
-	cd api && php bin/console doctrine:fixtures:load -q && cd ..
 
 .PHONY: env_prod
 env_prod: 
@@ -73,16 +63,12 @@ jwt_keys:
 clear:
 	$(sy) cache:clear
 
-.PHONY:
-build:
-	cd app && npm run build && cd ..
-
 .PHONY: deploy
 deploy:
-	ssh icri5960@109.234.161.72 'cd public_html/hacking-project && git pull origin master && make prod ENV=prod'
-
+	ssh debian@149.202.45.43 'cd hacking-project && git pull origin master && make prod ENV=prod && make jwt_keys'
+	
 .PHONY: dev
 dev: env_dev up install migrations fixtures
 
 .PHONY: prod
-prod: env_prod install_prod migrations_prod fixtures_prod node_modules build
+prod: env_prod file_env_npm up install migrations fixtures
