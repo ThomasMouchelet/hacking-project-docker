@@ -18,6 +18,7 @@ import VideoPage from "./pages/VideoPage";
 import "./styles/app.scss"
 import "./styles/terminal.scss"
 import firebasedb from "./firebasedb";
+import Nyancat from "./components/Nyancat";
 
 const App = () => {
     const history = useHistory();
@@ -137,6 +138,7 @@ const App = () => {
                 pauseOnHover
             />
             {/* Same as */}
+            <Nyancat />
             <ToastContainer />
         </AuthContext.Provider>
     )

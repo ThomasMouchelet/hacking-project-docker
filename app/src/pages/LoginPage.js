@@ -29,7 +29,7 @@ const LoginPage = () => {
             setIsAuthenticated(true);
 
             if (usersAPI.isAdmin()) {
-                toast("🦄 Bravo jeune hacker", {
+                toast("🦄 Bravo jeune hacker, valide ta team pour terminer.", {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,

@@ -13,7 +13,7 @@ const ValidetedTeamList = ({teams,setTeams}) => {
                             {team.name} : 
                         </strong>
                         {team.completedAt ? (
-                            <span> -
+                            <span>
                                 <Moment format="DD/MM/YYYY - HH:mm:ss">{team.completedAt}</Moment>
                             </span>
                         ) : (

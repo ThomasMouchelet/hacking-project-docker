@@ -287,3 +287,37 @@ ul{
         font-weight: 400;
     }
 }
+
+.nyan-cat{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+
+    &.show{
+        display: block;
+    }
+    img{
+        width: 50%;
+    }
+    animation: cat 3.9s;
+}
+
+.admin .nyan-cat{
+    position: absolute;
+    width: 100px;
+    left: 0;
+    top: 0;
+    display: block;
+
+    img{
+        width: 100%;
+    }
+    animation: none;
+}
+
+@keyframes cat{
+    0%{left: 0;}
+    100%{left: 1800px;}
+}

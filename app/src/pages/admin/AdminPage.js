@@ -16,12 +16,16 @@ const AdminPage = () => {
         playing: false,
         controls: false
     })
+    const [gameoptions, setGameoptions] = useState({
+        nyancat: false
+    })
 
     useEffect(() => {
         AuthAPI.setup();
         AuthAPI.isAuthenticated();
         fetchAllTeams()
         fetchVideo()
+        fetchGameoptions()
     }, [reload])
 
     const fetchAllTeams = async () => {
@@ -49,6 +53,14 @@ const AdminPage = () => {
             });       
     }
 
+    const fetchGameoptions = async () => {
+        firebasedb.collection("game").doc("options")
+            .onSnapshot((doc) => {
+                const data = doc.data()
+                setGameoptions(data)
+            });       
+    }
+
     const handleControlVideo = ({ currentTarget }) => {
         const index = currentTarget.id
         const action = currentTarget.dataset.action === "true"
@@ -61,6 +73,23 @@ const AdminPage = () => {
         setVideo(newVideoControl)
 
         firebasedb.collection("video").doc("mistert").set(newVideoControl);
+    }
+
+    const handleNyancat = ({ currentTarget }) => {
+        const newGameoptions = {
+            ...gameoptions,
+            nyancat:true
+        }
+        setGameoptions(newGameoptions)
+
+        firebasedb.collection("game").doc("options").set(newGameoptions);
+
+        setTimeout(() => {
+            firebasedb.collection("game").doc("options").set({
+                ...gameoptions,
+                nyancat:false
+            });
+        }, 4000);
     }
 
     return (
@@ -77,6 +106,9 @@ const AdminPage = () => {
                 ) : (
                         <button onClick={handleControlVideo} id="controls" data-action="true">Controls ON</button>
                     )}
+                
+                <button onClick={handleNyancat} id="nyancat" data-action="true">SPAWN CAT</button>
+                
                 <button onClick={handleReload}>RELOAD DATA</button>
             </div>
 
