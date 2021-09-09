@@ -47,9 +47,7 @@ env_dev:
 
 .PHONY: file_env_npm
 file_env_npm: 
-	cd app && envsubst < $(file_env_npm_name) > .env && cd .. \
-	cd api && envsubst < $(file_env_npm_name) > .env && cd .. 
-
+	cd app && envsubst < $(file_env_npm_name) > .env && cd .. && cd api && envsubst < $(file_env_npm_name) > .env && cd ..
 
 .PHONY: reset
 reset: ## Delete all volumes and all images
