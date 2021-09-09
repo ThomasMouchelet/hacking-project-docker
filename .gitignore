@@ -53,3 +53,7 @@ Migration.md
 /.phpcs-cache
 /phpcs.xml
 ###< squizlabs/php_codesniffer ###
+
+*/jwt
+*/private.pem
+*/public.pem

@@ -63,9 +63,13 @@ jwt_keys:
 clear:
 	$(sy) cache:clear
 
-.PHONY: deploy
+.PHONY: deploy_pull
 deploy:
 	ssh debian@149.202.45.43 'cd hacking-project-docker && git pull origin master && make prod ENV=prod && make jwt_keys'
+
+.PHONY: deploy_init
+deploy:
+	ssh debian@149.202.45.43 'git clone https://github.com/ThomasMouchelet/hacking-project-docker.git && make prod ENV=prod && make jwt_keys'
 	
 .PHONY: dev
 dev: env_dev up install migrations fixtures
