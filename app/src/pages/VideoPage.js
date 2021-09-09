@@ -6,7 +6,7 @@ import firebasedb from "../firebasedb";
 
 const VideoPage = () => {
     // const [url, setUrl] = useState(`${window.location.origin}/assets/mistert.mp4`)
-    const [url, setUrl] = useState(`https://icri5960.odns.fr/hacking-project/assets/mistert.mp4`)
+    const [url, setUrl] = useState(`http://icri5960.odns.fr/hacking-project/assets/mistert.mp4`)
     const playerRef = useRef()
     const [playing, setPlaying] = useState(false)
     const [controls, setControls] = useState(false)
