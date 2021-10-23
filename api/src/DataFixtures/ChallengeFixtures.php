@@ -82,7 +82,7 @@ class ChallengeFixtures extends Fixture
                 <br> 
                 Vous commencez à avoir l'habitude... inspectez et trouvez simplement quel lien suivre.
                 <br><br>
-                <a href=\"/create_team\" id=\"link\" style=\"display: none;\" target=\"_blank\">C'est bien ici !</a>
+                <a href=\"/#/create_team\" id=\"link\" style=\"display: none;\" target=\"_blank\">C'est bien ici !</a>
             ",
             'orderChallenge' => "5",
             'type' => 'student'

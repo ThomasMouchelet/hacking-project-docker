@@ -86,7 +86,7 @@ const App = () => {
                 setIsAuthenticated,
             }}
         >
-            <BrowserRouter>
+            <HashRouter>
                 <div>
                     {isAuthenticated && <button className="disconnect" onClick={handleLogout}>Déconnexion</button>}
                     <Switch>
@@ -125,7 +125,7 @@ const App = () => {
                         />
                     </Switch>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
