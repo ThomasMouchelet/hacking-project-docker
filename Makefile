@@ -1,5 +1,5 @@
 .PHONY: install
-install: up ## Installer les dépendances symfony
+install: ## Installer les dépendances symfony
 	cd api && composer install && cd ..
 
 .PHONY: node_modules
@@ -7,7 +7,7 @@ node_modules:
 	cd app && npm update && npm install && cd ..
 
 .PHONY: migrations
-migrations: install ## Génère les tables dans la base de données
+migrations: ## Génère les tables dans la base de données
 	cd api && php bin/console doctrine:migrations:migrate -q && cd ..
 
 .PHONY: fixtures
