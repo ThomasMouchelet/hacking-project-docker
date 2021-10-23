@@ -1,27 +1,6 @@
-ifeq ($(ENV), dev)
-	compose_file := docker-compose-dev.yml
-	file_env_npm_name := .env.dev
-else
-	compose_file := docker-compose-prod.yml
-	file_env_npm_name := .env.prod
-endif
-
-
-de := docker exec docker-container-php
-sy := $(de) php bin/console
-dc := docker-compose -f $(compose_file)
-
-.PHONY: down
-down: ## Down docker-compose.yml file
-	$(dc) down --remove-orphans
-
-.PHONY: up
-up: ## Up docker-compose.yml file
-	$(dc) up -d --build
-
 .PHONY: install
 install: up ## Installer les dépendances symfony
-	$(de) composer install
+	cd api && composer install && cd ..
 
 .PHONY: node_modules
 node_modules: 
@@ -29,27 +8,15 @@ node_modules:
 
 .PHONY: migrations
 migrations: install ## Génère les tables dans la base de données
-	$(de) php bin/console doctrine:migrations:migrate -q
+	cd api && php bin/console doctrine:migrations:migrate -q && cd ..
 
 .PHONY: fixtures
 fixtures: ## Génèrer des fausses données tables dans la base de données
-	$(de) php bin/console doctrine:fixtures:load -q
+	cd api && php bin/console doctrine:fixtures:load -q && cd ..
 
-.PHONY: env_prod
-env_prod: 
-	ENV=prod
-
-.PHONY: env_dev
-env_dev: 
-	ENV=dev
-
-.PHONY: file_env_npm
-file_env_npm: 
-	cd app && envsubst < $(file_env_npm_name) > .env && cd ..
-
-.PHONY: reset
-reset: ## Delete all volumes and all images
-	docker volume rm $$(docker volume ls -q) && docker rmi $$(docker images -q) 
+.PHONY: files_env
+files_env: 
+	cd app && envsubst < .env.prod > .env && cd .. && cd api && envsubst < .env.prod > .env && cd ..
 
 .PHONY: help
 help: ## Affiche cette aide
@@ -57,22 +24,11 @@ help: ## Affiche cette aide
 
 .PHONY: jwt_keys
 jwt_keys: 
-	$(de) php bin/console lexik:jwt:generate-keypair --overwrite
+	cd api && php bin/console lexik:jwt:generate-keypair --overwrite && cd ..
 
 .PHONY: clear
 clear:
-	$(sy) cache:clear
-
-.PHONY: deploy_pull
-deploy_pull:
-	ssh debian@149.202.45.43 'cd hacking-project-docker && git pull origin master && make prod ENV=prod'
-
-.PHONY: deploy_init
-deploy_init:
-	ssh debian@149.202.45.43 'git clone https://github.com/ThomasMouchelet/hacking-project-docker.git && make prod ENV=prod && make jwt_keys'
-	
-.PHONY: dev
-dev: env_dev up install migrations fixtures node_modules
+	cd api && cache:clear && cd ..
 
 .PHONY: prod
-prod: env_prod file_env_npm up install migrations fixtures
+prod: env_prod files_env install migrations fixtures node_modules jwt_keys
