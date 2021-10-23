@@ -26,79 +26,43 @@ class ChallengeFixtures extends Fixture
             'type' => 'student'
         ],
         'challenge2' => [
-            'name' => "Social engineering",
-            'answer' => "0609307037",
+            'name' => "Test oculaire",
+            'answer' => "#00ff00",
             'description' => "
-                Toujours là, {namingGame} ?
+                Eh bien, nous pouvons enfin commencer {namingGame} !
                 <br><br>
-                Avez-vous entendu parler du social engineering ? <br> Un bon hacker sait <em>où</em> et <em>comment</em> trouver une information. 
-                <br>
-                Pour atteindre l'étape suivante, écoutez ce message audio.
-                <br><br> 
-                <audio controls>
-                    <source src=\"http://localhost:3000/assets/mistert.wav\" type=\"audio/ogg\" />
-                    <source src=\"http://localhost:3000/assets/mistert.wav\" type=\"audio/mpeg\" />
-                            Your browser does not support the audio element.
-                </audio>
+                Un premier test facile
                 <br><br>
-                Vous avez trouvé l'information demandée ? Rentrez-la ci-dessous.",
+                Vous me voyez, d'ailleurs je suis plutôt voyant. A vous de me trouver et de me rentrer Hexa-ctement
+                ",
             'orderChallenge' => "2",
             'type' => 'student'
         ],
         'challenge3' => [
-            'name' => "Advertising",
-            'answer' => "advertising next generation",
+            'name' => "Code à trouver",
+            'answer' => "réponse",
             'description' => "
-                Celle-ci est cadeau, mais il est toujours bon de savoir qui est susceptible de nous observer. 
-                <br><br>
-                Pour atteindre l'étape suivante, répondez à cette question : 
-                <br><br>
-                <em>\"Quelle est la baseline de l’ESP ?\"</em>
+            à trouver
             ",
             'orderChallenge' => "3",
             'type' => 'student'
         ],
         'challenge4' => [
-            'name' => "F12",
-            'answer' => "slacker",
+            'name' => "Dev-joke",
+            'answer' => "mrtdominera",
             'description' => "
-                Vous tenez le coup, {namingGame} ? 
-                <br><br>
-                Ce n'est pourtant pas si compliqué…
-                <br><br> 
-                Restons simple avant de passer à l'étape 5, je pense que ça se passe de commentaire.
-                <!-- TODO : faire en sorte que l'étudiant trouve le commentaire >> slacker -->
+                <div id=\"MrTdominera\">
+                    Cher {namingGame}, j'espère que ces quelques aller-retours vous ont dégourdi les jambes. 
+                    <br><br>
+                    Au risque que cela vous semble répétitif, il est important d'avoir de la <em>.class</em>
+                    <br>
+                    Mais la réponse que vous cherchez nécessite quelque chose de bien plus <em>#unique</em>
+                </div>
             ",
             'orderChallenge' => "4",
             'type' => 'student'
         ],
         'challenge5' => [
-            'name' => "Piste verte",
-            'answer' => "rossignol",
-            'description' => "
-                Toujours à l'affût des nouvelles technologies et de leurs possibilités, un hacker doit également être en mesure de les utiliser.
-                <br><br>  
-                Si vous n'aimez pas la manière dont le babyfoot est disposé, retournez-le.
-            ",
-            'orderChallenge' => "5",
-            'type' => 'student'
-        ],
-        'challenge6' => [
-            'name' => "Dev-joke",
-            'answer' => "mrtdominera",
-            'description' => "
-               <div id=\"MrTdominera\">
-                Cher {namingGame}, j'espère que ces quelques aller-retours vous ont dégourdi les jambes. 
-                <br><br>
-                Au risque que cela vous semble répétitif, il est important d'avoir de la <em>.class</em>
-                <br>
-                Mais la réponse que vous cherchez nécessite quelque chose de bien plus <em>#unique</em>
-                </div>
-            ",
-            'orderChallenge' => "6",
-            'type' => 'student'
-        ],
-        'challenge7' => [
             'name' => "Pas mal",
             'answer' => "team",
             'description' => "
@@ -118,68 +82,84 @@ class ChallengeFixtures extends Fixture
                 <br> 
                 Vous commencez à avoir l'habitude... inspectez et trouvez simplement quel lien suivre.
                 <br><br>
-                <a href=\"/#/create_team\" id=\"link\" style=\"display: none;\" target=\"_blank\">C'est bien ici !</a>
+                <a href=\"/create_team\" id=\"link\" style=\"display: none;\" target=\"_blank\">C'est bien ici !</a>
             ",
-            'orderChallenge' => "7",
+            'orderChallenge' => "5",
             'type' => 'student'
         ],
-        'challenge8' => [
-            'name' => "Test oculaire",
-            'answer' => "#0f0",
+        'challenge6' => [
+            'name' => "WPA",
+            'answer' => "netgear-6-wpa3-2707",
             'description' => "
                 Eh bien, nous pouvons enfin commencer {namingGame} !
                 <br><br>
-                Un premier test facile, pour identifier qui sera le leader de cette équipe :
+                Il est temps de changer le monde !
                 <br><br>
-                “Vous me voyez depuis le début, d'ailleurs je suis plutôt voyant. A vous de me trouver et de me rentrer Hexa-ctement”
+                J’ai réussit à récupérer les positions GPS de l’un des membre de Tcorp.
+                Il est passé par cette école et d'après ses messages il avait rendez-vous au bureau pédagogique le vendredi 22 octobre à 17h15.
+                <br>
+                Il s’est probablement connecté avec son ordinateur au réseau wifi. Sur chacune de ces bornes il y a une référence d'inscrits.
+                <br>
+                En imaginant le parcours qu'il a pu effectuer, trouver la borne et noter la référence. 
+                Elle nous permettra de parcourir les adresses IP qui ce sont connecter.
+            ",
+            'orderChallenge' => "6",
+            'type' => 'team'
+        ],
+        'challenge7' => [
+            'name' => "Trouver l'adresse IP",
+            'answer' => "192.168.0.205",
+            'description' => "
+                Il nous faut maintenant récupérer l’adresse ip de son ordinateur portable. 
+                Je suis parvenu à récupérer l’interface d’administration réseaux de l’école.
+                <br>
+                Vous devez trouver une ip qui matche avec la date et l'heure de son rendez-vous (22 octobre)
+                <br><br>
+                http://meraki.icri5960.odns.fr
+
+            ",
+            'orderChallenge' => "7",
+            'type' => 'team'
+        ],
+        'challenge8' => [
+            'name' => "Search and replace",
+            'answer' => "thomas mouchelet",
+            'description' => "
+                C’est bien cela, elle correspond avec celle que j’ai récupérées de mon coté. 
+                <br>
+                Il faut que l’ont sache de qui il s’agit pour récolter des informations.
+                Envoi moi son prénom et son nom.
+                <br>
+                Il faut fouiller l'école, peut être qu’il y a des indices.
             ",
             'orderChallenge' => "8",
             'type' => 'team'
         ],
         'challenge9' => [
-            'name' => "Rain Man",
-            'answer' => "45",
+            'name' => "Social engineering",
+            'answer' => "18/07/1988",
             'description' => "
-                Vous semblez prendre du bon temps, vous avez pris des couleurs dirait-on.
+                Bien joué, on sais maintenant qui nous devons attaquer. 
                 <br><br>
-                Passons au calcul, pouvez-vous me résoudre cette équation :
+                Restons discret pour ne pas qu’il le découvre. Cela pourrait mettre en péril notre plan.
                 <br><br>
-
-                (le board + war room)² x (la régie + le lab)<br>
-                _________________________________<br>
-                le board + war room<br>
+                Nous allons effectuer une attaque par dictionnaire, <br>
+                il nous faut des informations personnelles. Trouvez la date de naissance de Thomas Mouchelet.
             ",
             'orderChallenge' => "9",
             'type' => 'team'
         ],
         'challenge10' => [
-            'name' => "Je te vois",
-            'answer' => "artistcode",
+            'name' => "L'attaque des titans !",
+            'answer' => "",
             'description' => "
-                On dit d’une oeuvre d’art qu’elle n’appartient plus à son créateur dès lors qu’elle est achevée.
-                <br>
-                La vôtre vous regarde depuis le DÉBUT et elle a quelque chose à vous dire.
+                Je ne regrette pas de vous avoir recruter ! On va maintenant passer à l’attaque !
+                <br><br>
+                Il faut se connecter à sont compte, utiliser les informations récoltés
+                <br><br>
+                http://sn.icri5960.odns.fr/
             ",
             'orderChallenge' => "10",
-            'type' => 'team'
-        ],
-        'challenge11' => [
-            'name' => "Miahou",
-            'answer' => "cox",
-            'description' => "
-                Bravo, mais ceci n’était qu’un test.
-                <br>
-                Nous allons maintenant pouvoir collaborer ensemble pour pénétrer le système.
-                <br>
-                Je suis parvenue à collecter certaines informations, mais vous allez devoir terminer le travail.
-                <br>
-                Pour accéder à l’interface administrateur et prendre le contrôle du système il vous faudra un identifiant que j’ai réussi à obtenir et qui le suivant : <em>mistert</em>
-                <br>
-                D'après mes informations, le mot de passe comporte le nom du chat de Thomas Mouchelet.
-                <br>
-                Trouvez son nom et je vous aiderai à cracker le mot de passe.
-            ",
-            'orderChallenge' => "11",
             'type' => 'team'
         ],
     ];

@@ -69,7 +69,8 @@ const ChallengePage = () => {
     }
 
     const handleChange = ({ currentTarget }) => {
-        setUserAnswer(currentTarget.value);
+        const inputAnswer = currentTarget.value.toLowerCase()
+        setUserAnswer(inputAnswer);
     };
 
     const handlePast = (e) => {
