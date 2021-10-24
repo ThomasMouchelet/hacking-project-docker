@@ -49,7 +49,7 @@ class StudentFixtures extends Fixture
             $manager->persist($student);
 
             $user = new User();
-            $hash = $this->encoder->encodePassword($user, "bootstrap");
+            $hash = $this->encoder->encodePassword($user, "metaverse");
 
             // Supprimer les espaces dans les noms de famille pour le username
             $newLastname = str_replace(" ", "", $data["lastName"]);

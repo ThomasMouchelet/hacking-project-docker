@@ -115,7 +115,7 @@ class ChallengeFixtures extends Fixture
                 <br>
                 Vous devez trouver une ip qui matche avec la date et l'heure de son rendez-vous (22 octobre)
                 <br><br>
-                http://meraki.icri5960.odns.fr
+                <a href=\"http://meraki.icri5960.odns.fr\" id=\"link\" target=\"_blank\">meraki.icri5960.odns.fr</a>
 
             ",
             'orderChallenge' => "7",
@@ -158,6 +158,7 @@ class ChallengeFixtures extends Fixture
                 Il faut se connecter à sont compte, utiliser les informations récoltés
                 <br><br>
                 http://sn.icri5960.odns.fr/
+                <a href=\"http://sn.icri5960.odns.fr/\" id=\"link\" target=\"_blank\">sn.icri5960.odns.fr/</a>
             ",
             'orderChallenge' => "10",
             'type' => 'team'
