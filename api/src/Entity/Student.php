@@ -15,6 +15,9 @@ use Symfony\Component\Serializer\Annotation\Groups;
  * normalizationContext={
  *     "groups"={"students_read"}
  *  },
+ *  attributes={
+ *      "pagination_items_per_page"=60
+ *  }
  * )
  */
 class Student
@@ -53,6 +56,7 @@ class Student
 
     /**
      * @ORM\OneToOne(targetEntity=User::class, mappedBy="student", cascade={"persist", "remove"})
+     * @Groups({"students_read"})
      */
     private $user;
 

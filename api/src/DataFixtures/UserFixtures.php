@@ -22,9 +22,14 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $user = new User();
+        $remi = new User();
         $hash = $this->encoder->encodePassword($user, "cox1988");
 
         $user->setUsername("mistert")
+            ->setPassword($hash)
+            ->setRoles(["ROLE_ADMIN"]);
+
+        $remi->setUsername("remi")
             ->setPassword($hash)
             ->setRoles(["ROLE_ADMIN"]);
 

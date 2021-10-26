@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import studentAPI from "../services/studentAPI";
 
-const LoginPage = () => {
+const StudentList = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [studentList, setStudentList] = useState(null)
 
@@ -26,7 +26,7 @@ const LoginPage = () => {
             {isLoading && Object.values(studentList).map((student, key) => {
                 return (
                     <div key={key}>
-                        {student.firstName} {student.lastName}
+                        {student.firstName} {student.lastName} : {student.user.username}
                     </div>
                 )
             })}
@@ -35,4 +35,4 @@ const LoginPage = () => {
     )
 }
 
-export default LoginPage;
+export default StudentList;
