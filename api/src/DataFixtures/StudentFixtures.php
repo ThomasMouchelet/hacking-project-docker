@@ -33,7 +33,7 @@ class StudentFixtures extends Fixture
             'lastName' => "BOUSQUET",
         ],
         'student6' => [
-            'firstName' => "Céline",
+            'firstName' => "Celine",
             'lastName' => "COUGNON",
         ],
         'student7' => [
@@ -69,7 +69,7 @@ class StudentFixtures extends Fixture
             'lastName' => "LAFFONT",
         ],
         'student15' => [
-            'firstName' => "Léa",
+            'firstName' => "Lea",
             'lastName' => "LALLEMAND",
         ],
         'student16' => [
@@ -77,7 +77,7 @@ class StudentFixtures extends Fixture
             'lastName' => "LORY",
         ],
         'student17' => [
-            'firstName' => "Clément",
+            'firstName' => "Clement",
             'lastName' => "MEHAT",
         ],
         'student18' => [
@@ -89,7 +89,7 @@ class StudentFixtures extends Fixture
             'lastName' => "POUDAVIGNE",
         ],
         'student20' => [
-            'firstName' => "Bérénice",
+            'firstName' => "Berenice",
             'lastName' => "RELLE",
         ],
         'student21' => [
@@ -133,11 +133,11 @@ class StudentFixtures extends Fixture
             'lastName' => "BRICOURT",
         ],
         'student31' => [
-            'firstName' => "Léo",
+            'firstName' => "Leo",
             'lastName' => "BUTIN",
         ],
         'student32' => [
-            'firstName' => "Loïc",
+            'firstName' => "Loic",
             'lastName' => "DELEGLISE",
         ],
         'student33' => [
@@ -157,7 +157,7 @@ class StudentFixtures extends Fixture
             'lastName' => "LECAS",
         ],
         'student37' => [
-            'firstName' => "Célia-Yuka",
+            'firstName' => "Celia-Yuka",
             'lastName' => "MARIGNAN",
         ],
         'student38' => [
@@ -173,7 +173,7 @@ class StudentFixtures extends Fixture
             'lastName' => "SERRE",
         ],
         'student41' => [
-            'firstName' => "Théo",
+            'firstName' => "Theo",
             'lastName' => "SLIMANI",
         ],
         'student42' => [
@@ -185,38 +185,34 @@ class StudentFixtures extends Fixture
             'lastName' => "WATIN",
         ],
         'student44' => [
-            'firstName' => "Evelyne",
-            'lastName' => "YONTCHEV",
-        ],
-        'student45' => [
             'firstName' => "Iannis",
             'lastName' => "COUBLE",
         ],
-        'student46' => [
+        'student45' => [
             'firstName' => "Simon",
             'lastName' => "DURET",
         ],
-        'student47' => [
+        'student46' => [
             'firstName' => "Rudy",
             'lastName' => "KOUAME",
         ],
-        'student48' => [
-            'firstName' => "Théo",
+        'student47' => [
+            'firstName' => "Theo",
             'lastName' => "METAIS",
         ],
-        'student49' => [
+        'student48' => [
             'firstName' => "Clarisse",
             'lastName' => "MONITOR",
         ],
-        'student50' => [
+        'student49' => [
             'firstName' => "Adrien",
             'lastName' => "ROY",
         ],
-        'student51' => [
-            'firstName' => "Raphaël",
+        'student50' => [
+            'firstName' => "Raphael",
             'lastName' => "SABATIER",
         ],
-        'student52' => [
+        'student51' => [
             'firstName' => "Amir Berkane",
             'lastName' => "TERKMANE",
         ],    

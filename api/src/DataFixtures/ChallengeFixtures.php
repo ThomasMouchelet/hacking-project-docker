@@ -39,10 +39,10 @@ class ChallengeFixtures extends Fixture
             'type' => 'student'
         ],
         'challenge3' => [
-            'name' => "Code à trouver",
-            'answer' => "réponse",
+            'name' => "Binaire",
+            'answer' => "i love css",
             'description' => "
-            à trouver
+                01101001 00100000 01101100 01101111 01110110 01100101 00100000 01100011 01110011 01110011 
             ",
             'orderChallenge' => "3",
             'type' => 'student'
@@ -108,12 +108,12 @@ class ChallengeFixtures extends Fixture
         ],
         'challenge7' => [
             'name' => "Trouver l'adresse IP",
-            'answer' => "192.168.0.205",
+            'answer' => "192.168.0.250",
             'description' => "
                 Il nous faut maintenant récupérer l’adresse ip de son ordinateur portable. 
                 Je suis parvenu à récupérer l’interface d’administration réseaux de l’école.
                 <br>
-                Vous devez trouver une ip qui matche avec la date et l'heure de son rendez-vous (22 octobre)
+                Vous devez trouver une ip qui corresponde avec la date de son rendez-vous (22 octobre)
                 <br><br>
                 <a href=\"http://meraki.icri5960.odns.fr\" id=\"link\" target=\"_blank\">meraki.icri5960.odns.fr</a>
 
