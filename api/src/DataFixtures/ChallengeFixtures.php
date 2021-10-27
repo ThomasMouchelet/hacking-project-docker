@@ -21,7 +21,7 @@ class ChallengeFixtures extends Fixture
                                 <br><br>
                                 Voici un indice, mais ne vous y habituez pas.
                                 <br><br>
-                                <em>“Le sombre ciel du studio photo vous fera faire la connexion”</em>",
+                                <em>“Le dessous du stade cache des indices”</em>",
             'orderChallenge' => "1",
             'type' => 'student'
         ],
