@@ -26,16 +26,17 @@ class TeamFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         // Replacer par le nombre total d'étudiants
-        $totalStudents = 4;
+        $totalStudents = 52;
+        $studentPerGroup = 4;
         $studentWithTeam = [];
 
         // Replacer par le nombre total d'étudiants / 2
-        for ($i = 0; $i < 2; $i++) {
+        for ($i = 0; $i < $studentPerGroup / $studentPerGroup; $i++) {
             $team = new Team();
             $studentsInTeam = [];
 
             // Replacer par le nombre d'étudiants par groupe
-            for ($s = 0; $s < 2; $s++) {
+            for ($s = 0; $s < $studentPerGroup; $s++) {
                 $selectedStudent = null;
 
                 while (in_array($selectedStudent, $studentWithTeam) || $selectedStudent === null) {
