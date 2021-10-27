@@ -12,7 +12,7 @@ class ChallengeFixtures extends Fixture
     const CHALLENGES = [
         'challenge1' => [
             'name' => "L'observation",
-            'answer' => "268",
+            'answer' => "0",
             'description' => "Bonjour {namingGame}
                                 <br><br>
                                 L'une des principales qualité d'un hackeur est l'observation. Avez-vous bien analysé l'ensemble du lieu où vous vous trouvez ?
