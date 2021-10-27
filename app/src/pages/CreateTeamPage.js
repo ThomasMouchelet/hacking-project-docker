@@ -13,6 +13,7 @@ const CreateTeamPage = () => {
     const [userSecretKeyValue, setUserSecretKeyValue] = useState({
         code1: "",
         code2: "",
+        code3: "",
     })
     const [isLoading, setIsLoading] = useState(false)
     const [winMode, setWinMode] = useState(false)
@@ -51,6 +52,7 @@ const CreateTeamPage = () => {
             const secretTeamCode = {
                 code1: studentTeam.secretKey.slice(0, 3),
                 code2: studentTeam.secretKey.slice(3, 6),
+                code3: studentTeam.secretKey.slice(3, 6),
             }
 
             Object.keys(secretTeamCode).map((index, key) => {
@@ -119,6 +121,7 @@ const CreateTeamPage = () => {
             <form>
                 <input type="text" onChange={handleChange} name="code1" placeholder="code 1" />
                 <input type="text" onChange={handleChange} name="code2" placeholder="code 2" />
+                <input type="text" onChange={handleChange} name="code3" placeholder="code 3" />
             </form>
             {winMode && winModView}
         </div>
