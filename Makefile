@@ -31,4 +31,4 @@ clear:
 	cd api && cache:clear && cd ..
 
 .PHONY: prod
-prod: files_env install migrations fixtures node_modules jwt_keys
+prod: install migrations fixtures node_modules jwt_keys
