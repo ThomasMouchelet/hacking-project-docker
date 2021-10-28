@@ -17,11 +17,11 @@ class ChallengeFixtures extends Fixture
                                 <br><br>
                                 L'une des principales qualité d'un hackeur est l'observation. Avez-vous bien analysé l'ensemble du lieu où vous vous trouvez ?
                                 <br>
-                                Pour atteindre l'étape 2, vous devrez trouver et renseigner un code à 3 chiffres dans le champs ci-dessous.
+                                Pour atteindre l'étape 2, vous devrez trouver et renseigner numéro dans le champs ci-dessous.
                                 <br><br>
                                 Voici un indice, mais ne vous y habituez pas.
                                 <br><br>
-                                <em>“Le dessous du stade cache des indices”</em>",
+                                <em>“Il vous faudra analyser les dessous du stade pour gagner la partie</em>",
             'orderChallenge' => "1",
             'type' => 'student'
         ],
@@ -39,7 +39,7 @@ class ChallengeFixtures extends Fixture
             'type' => 'student'
         ],
         'challenge3' => [
-            'name' => "Binaire",
+            'name' => "01000010 01101001 01101110 01100001 01101001 01110010 01100101",
             'answer' => "i love css",
             'description' => "
                 01101001 00100000 01101100 01101111 01110110 01100101 00100000 01100011 01110011 01110011 
@@ -95,13 +95,13 @@ class ChallengeFixtures extends Fixture
                 <br><br>
                 Il est temps de changer le monde !
                 <br><br>
-                J’ai réussit à récupérer les positions GPS de l’un des membre de Tcorp.
-                Il est passé par cette école et d'après ses messages il avait rendez-vous au bureau pédagogique le vendredi 22 octobre à 17h15.
+                J’ai réussi à récupérer les positions GPS de l’un des membres de Tcorp.
+                Il est passé par cette école le vendredi 22 octobre.
                 <br>
-                Il s’est probablement connecté avec son ordinateur au réseau wifi. Sur chacune de ces bornes il y a une référence d'inscrits.
+                Il s’est probablement connecté avec son ordinateur au réseau wifi. Sur certaines de ces bornes, il y a une référence d'inscrite.
                 <br>
-                En imaginant le parcours qu'il a pu effectuer, trouver la borne et noter la référence. 
-                Elle nous permettra de parcourir les adresses IP qui ce sont connecter.
+                Trouvez la borne et noter la référence. 
+                Elle nous permettra de parcourir des adresses IP.
             ",
             'orderChallenge' => "6",
             'type' => 'team'
@@ -113,7 +113,7 @@ class ChallengeFixtures extends Fixture
                 Il nous faut maintenant récupérer l’adresse ip de son ordinateur portable. 
                 Je suis parvenu à récupérer l’interface d’administration réseaux de l’école.
                 <br>
-                Vous devez trouver une ip qui corresponde avec la date de son rendez-vous (22 octobre)
+                Vous devez trouver une ip qui corresponde avec la date de son passage (22 octobre)
                 <br><br>
                 <a href=\"http://meraki.icri5960.odns.fr\" id=\"link\" target=\"_blank\">meraki.icri5960.odns.fr</a>
 
@@ -125,10 +125,10 @@ class ChallengeFixtures extends Fixture
             'name' => "Search and replace",
             'answer' => "thomas mouchelet",
             'description' => "
-                C’est bien cela, elle correspond avec celle que j’ai récupérées de mon coté. 
+                C’est bien cela, elle correspond avec celle que j’ai récupérée de mon côté. 
                 <br>
                 Il faut que l’ont sache de qui il s’agit pour récolter des informations.
-                Envoi moi son prénom et son nom.
+                Envoiez moi son prénom et son nom.
                 <br>
                 Il faut fouiller l'école, peut être qu’il y a des indices.
             ",
@@ -139,9 +139,9 @@ class ChallengeFixtures extends Fixture
             'name' => "Social engineering",
             'answer' => "18/07/1988",
             'description' => "
-                Bien joué, on sais maintenant qui nous devons attaquer. 
+                Bien joué, nous savons maintenant à qui nous attaquer. 
                 <br><br>
-                Restons discret pour ne pas qu’il le découvre. Cela pourrait mettre en péril notre plan.
+                Restons discrets pour ne pas qu’il le découvre. Cela pourrait mettre en péril notre plan.
                 <br><br>
                 Nous allons effectuer une attaque par dictionnaire, <br>
                 il nous faut des informations personnelles. Trouvez la date de naissance de Thomas Mouchelet.
@@ -153,11 +153,10 @@ class ChallengeFixtures extends Fixture
             'name' => "L'attaque des titans !",
             'answer' => "",
             'description' => "
-                Je ne regrette pas de vous avoir recruter ! On va maintenant passer à l’attaque !
+                Je ne regrette pas de vous avoir recruté ! On va maintenant passer à l’attaque !
                 <br><br>
-                Il faut se connecter à sont compte, utiliser les informations récoltés
+                Avec sa date de naissance et son prénom nous allons pouvoir nous connecter.
                 <br><br>
-                http://sn.icri5960.odns.fr/
                 <a href=\"http://sn.icri5960.odns.fr/\" id=\"link\" target=\"_blank\">sn.icri5960.odns.fr/</a>
             ",
             'orderChallenge' => "10",
