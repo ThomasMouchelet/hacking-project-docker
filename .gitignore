@@ -18,6 +18,7 @@ npm-debug.log
 yarn-error.log
 .vault_pass
 Migration.md
+private.md
 
 ###> symfony/framework-bundle ###
 */.env

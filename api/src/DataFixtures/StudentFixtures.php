@@ -13,209 +13,97 @@ class StudentFixtures extends Fixture
 
     const STUDENTS = [
         'student1' => [
-            'firstName' => "Maxime",
-            'lastName' => "ASSELINE",
+            'firstName' => "Jean-Baptiste",
+            'lastName' => "AUDEBERT",
         ],
         'student2' => [
-            'firstName' => "Emma",
-            'lastName' => "BESSAS",
+            'firstName' => "Julien",
+            'lastName' => "BACQUE",
         ],
         'student3' => [
-            'firstName' => "Hugo",
-            'lastName' => "BONY",
-        ],
-        'student4' => [
-            'firstName' => "Cyrielle",
-            'lastName' => "BOSSE",
-        ],
-        'student5' => [
-            'firstName' => "Adrien",
-            'lastName' => "BOUSQUET",
-        ],
-        'student6' => [
-            'firstName' => "Celine",
-            'lastName' => "COUGNON",
-        ],
-        'student7' => [
-            'firstName' => "Paul",
-            'lastName' => "CRAPPIER",
-        ],
-        'student8' => [
-            'firstName' => "Victor",
-            'lastName' => "HAIMEZ",
-        ],
-        'student9' => [
-            'firstName' => "Dylan",
-            'lastName' => "HAUDRY",
-        ],
-        'student10' => [
-            'firstName' => "Carla",
-            'lastName' => "HIBSCHELE",
-        ],
-        'student11' => [
-            'firstName' => "Louis",
-            'lastName' => "JUNCA",
-        ],
-        'student12' => [
-            'firstName' => "Mathieu",
-            'lastName' => "KLOPP",
-        ],
-        'student13' => [
-            'firstName' => "Lucas",
-            'lastName' => "LABROUSSE",
-        ],
-        'student14' => [
-            'firstName' => "Marie",
-            'lastName' => "LAFFONT",
-        ],
-        'student15' => [
-            'firstName' => "Lea",
-            'lastName' => "LALLEMAND",
-        ],
-        'student16' => [
-            'firstName' => "Etienne",
-            'lastName' => "LORY",
-        ],
-        'student17' => [
-            'firstName' => "Clement",
-            'lastName' => "MEHAT",
-        ],
-        'student18' => [
-            'firstName' => "Fanny",
-            'lastName' => "MOUSSET",
-        ],
-        'student19' => [
-            'firstName' => "Victor",
-            'lastName' => "POUDAVIGNE",
-        ],
-        'student20' => [
-            'firstName' => "Berenice",
-            'lastName' => "RELLE",
-        ],
-        'student21' => [
-            'firstName' => "Marie",
-            'lastName' => "SIDAMBAROMPOULE",
-        ],
-        'student22' => [
-            'firstName' => "Estelle",
-            'lastName' => "VASCHE",
-        ],
-        'student23' => [
-            'firstName' => "Marine",
-            'lastName' => "AUTHIER",
-        ],
-        'student24' => [
-            'firstName' => "Jean-Baptiste",
-            'lastName' => "BEY",
-        ],
-        'student25' => [
-            'firstName' => "Elise",
+            'firstName' => "Pierre",
             'lastName' => "BODIN",
         ],
-        'student26' => [
-            'firstName' => "Romain",
-            'lastName' => "BOISSONNET-MARQUET",
+        'student4' => [
+            'firstName' => "Teddy",
+            'lastName' => "BREGEON",
         ],
-        'student27' => [
-            'firstName' => "Elodie",
-            'lastName' => "BORNET",
+        'student5' => [
+            'firstName' => "Maxime",
+            'lastName' => "BROUSSE",
         ],
-        'student28' => [
-            'firstName' => "Emma",
-            'lastName' => "BOUDEY",
+        'student6' => [
+            'firstName' => "Tom",
+            'lastName' => "CAILLERES",
         ],
-        'student29' => [
-            'firstName' => "Hanae",
-            'lastName' => "BOUREKBA",
+        'student7' => [
+            'firstName' => "Morgane",
+            'lastName' => "DE BARROS",
         ],
-        'student30' => [
-            'firstName' => "Mathis",
-            'lastName' => "BRICOURT",
+        'student8' => [
+            'firstName' => "Vincent",
+            'lastName' => "DULOU",
         ],
-        'student31' => [
-            'firstName' => "Leo",
-            'lastName' => "BUTIN",
+        'student9' => [
+            'firstName' => "Armand",
+            'lastName' => "DURING",
         ],
-        'student32' => [
-            'firstName' => "Loic",
-            'lastName' => "DELEGLISE",
+        'student10' => [
+            'firstName' => "Anna",
+            'lastName' => "FRONTIN",
         ],
-        'student33' => [
-            'firstName' => "Mathis",
-            'lastName' => "DHAYNAUT",
+        'student11' => [
+            'firstName' => "Capucine",
+            'lastName' => "HOUEE",
         ],
-        'student34' => [
-            'firstName' => "Leslie",
-            'lastName' => "FEZANS",
+        'student12' => [
+            'firstName' => "Margaux",
+            'lastName' => "JAY",
         ],
-        'student35' => [
-            'firstName' => "Youness",
-            'lastName' => "KOURTE",
+        'student13' => [
+            'firstName' => "Gabriel",
+            'lastName' => "JOANNY",
         ],
-        'student36' => [
-            'firstName' => "Alexandre",
-            'lastName' => "LECAS",
+        'student14' => [
+            'firstName' => "Kaoutar",
+            'lastName' => "JOUDI",
         ],
-        'student37' => [
-            'firstName' => "Celia-Yuka",
-            'lastName' => "MARIGNAN",
+        'student15' => [
+            'firstName' => "Oriane",
+            'lastName' => "LARIK",
         ],
-        'student38' => [
-            'firstName' => "Benjamin",
-            'lastName' => "METAIS",
+        'student16' => [
+            'firstName' => "Jeremy",
+            'lastName' => "LESPRIT",
         ],
-        'student39' => [
-            'firstName' => "Nicolas",
-            'lastName' => "SABLAYROLLES",
+        'student17' => [
+            'firstName' => "Dorian",
+            'lastName' => "LEVENT",
         ],
-        'student40' => [
-            'firstName' => "Blandine",
-            'lastName' => "SERRE",
+        'student18' => [
+            'firstName' => "Victor",
+            'lastName' => "LEY",
         ],
-        'student41' => [
-            'firstName' => "Theo",
-            'lastName' => "SLIMANI",
+        'student19' => [
+            'firstName' => "Laetitia",
+            'lastName' => "MULLIER",
         ],
-        'student42' => [
-            'firstName' => "Mathilde",
-            'lastName' => "VINCENT",
+        'student20' => [
+            'firstName' => "Clement",
+            'lastName' => "RODE",
         ],
-        'student43' => [
-            'firstName' => "Malko",
-            'lastName' => "WATIN",
+        'student21' => [
+            'firstName' => "Marine",
+            'lastName' => "SOULAN",
         ],
-        'student44' => [
-            'firstName' => "Iannis",
-            'lastName' => "COUBLE",
+        'student22' => [
+            'firstName' => "Sandrine",
+            'lastName' => "TEIXIER",
         ],
-        'student45' => [
-            'firstName' => "Simon",
-            'lastName' => "DURET",
-        ],
-        'student46' => [
-            'firstName' => "Rudy",
-            'lastName' => "KOUAME",
-        ],
-        'student47' => [
-            'firstName' => "Theo",
-            'lastName' => "METAIS",
-        ],
-        'student48' => [
-            'firstName' => "Clarisse",
-            'lastName' => "MONITOR",
-        ],
-        'student49' => [
-            'firstName' => "Adrien",
-            'lastName' => "ROY",
-        ],
-        'student50' => [
-            'firstName' => "Raphael",
-            'lastName' => "SABATIER",
-        ],
-        'student51' => [
-            'firstName' => "Amir Berkane",
-            'lastName' => "TERKMANE",
-        ],    
+        'student23' => [
+            'firstName' => "Manon",
+            'lastName' => "VETAULT",
+        ]
     ];
 
     private $encoder;

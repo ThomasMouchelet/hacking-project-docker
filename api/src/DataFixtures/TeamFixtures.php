@@ -26,16 +26,16 @@ class TeamFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         // Replacer par le nombre total d'étudiants
-        $totalStudents = 51;
+        $totalStudents = 22;
         $studentWithTeam = [];
 
         // Replacer par le nombre total d'étudiants / 2
-        for ($i = 0; $i < 17; $i++) {
+        for ($i = 0; $i < 11; $i++) {
             $team = new Team();
             $studentsInTeam = [];
 
             // Replacer par le nombre d'étudiants par groupe
-            for ($s = 0; $s < 3; $s++) {
+            for ($s = 0; $s < 2; $s++) {
                 $selectedStudent = null;
 
                 while (in_array($selectedStudent, $studentWithTeam) || $selectedStudent === null) {
@@ -43,9 +43,18 @@ class TeamFixtures extends Fixture
                 }
                 if (!in_array($selectedStudent, $studentWithTeam)) {
                     $student = $this->getReference("student" . $selectedStudent);
+                    
                     array_push($studentWithTeam, $selectedStudent);
                     array_push($studentsInTeam, $student);
                     $team->addStudent($student);
+
+                    // Ajouter un troisème étudiant pour le dernier groupe
+                    if($i === 10){
+                        $lastStudent = $this->getReference("student23");
+                        array_push($studentWithTeam, 23);
+                        array_push($studentsInTeam, $lastStudent);
+                        $team->addStudent($lastStudent);
+                    }
                 }
             }
 
