@@ -6,7 +6,6 @@ else
 	file_env_npm_name := .env.prod
 endif
 
-
 de := docker exec docker-container-php
 sy := $(de) php bin/console
 dc := docker-compose -f $(compose_file)
