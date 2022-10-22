@@ -10,11 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const CreateTeamPage = () => {
     const [studentTeam, setStudentTeam] = useState(null)
-    const [userSecretKeyValue, setUserSecretKeyValue] = useState({
-        code1: "",
-        code2: "",
-        code3: "",
-    })
+    const [userSecretKeyValue, setUserSecretKeyValue] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [winMode, setWinMode] = useState(false)
     const { setIsAuthenticated } = useContext(AuthContext);
@@ -32,37 +28,52 @@ const CreateTeamPage = () => {
                 setWinMode(true);
             }
         }
+    }, [])
+
+    useEffect(() => {
+        let counter = 0;
+        userSecretKeyValue.map(student => {
+            if(student.value === student.secret){
+                counter++
+            }
+        })
+        if(counter === userSecretKeyValue.length){
+            setWinMode(true)
+        } else {
+            setWinMode(false)
+        }
     }, [userSecretKeyValue])
 
     const fetStudentTeam = async (id) => {
         try {
-            const result = await teamAPI.findOne(id);
+            const result = await teamAPI.findOne(id)
             setStudentTeam(result);
+            
+            let secrets = []
+            result.students.map((student, index) => {
+                secrets.push({
+                    placeholder: student.firstName,
+                    secret: student.secretKey,
+                    value: ""
+                })
+            })
+            setUserSecretKeyValue(secrets)
             setIsLoading(true)
         } catch (error) {
             console.log(error)
         }
     }
 
-    const handleChange = ({ currentTarget }) => {
-        const { value, name } = currentTarget;
-        setUserSecretKeyValue({ ...userSecretKeyValue, [name]: value });
-
+    const handleChange = (e, index) => {
+        const { value, name } = e.target;
+        userSecretKeyValue[index].value = value;
+        setUserSecretKeyValue([...userSecretKeyValue])
         if (isLoading) {
-            const secretTeamCode = {
-                code1: studentTeam.secretKey.slice(0, 3),
-                code2: studentTeam.secretKey.slice(3, 6),
-                code3: studentTeam.secretKey.slice(3, 6),
+            if(userSecretKeyValue[index].secret == value){
+                e.target.className = "valid"
+            } else {
+                e.target.className = ""
             }
-
-            Object.keys(secretTeamCode).map((index, key) => {
-                if ((index == currentTarget.name) && (secretTeamCode[index] == currentTarget.value)) {
-                    currentTarget.className = "valid"
-                }
-                if ((index == currentTarget.name) && (secretTeamCode[index] != currentTarget.value)) {
-                    currentTarget.className = ""
-                }
-            })
         }
     };
 
@@ -119,9 +130,9 @@ const CreateTeamPage = () => {
             </div>
 
             <form>
-                <input type="text" onChange={handleChange} name="code1" placeholder="code 1" />
-                <input type="text" onChange={handleChange} name="code2" placeholder="code 2" />
-                <input type="text" onChange={handleChange} name="code3" placeholder="code 3" />
+                {userSecretKeyValue && userSecretKeyValue.map((value, index) => (
+                    <input key={index} type="text" onChange={(e) => handleChange(e, index)} name={index} placeholder={`code ${index+1}`} />
+                ))}
             </form>
             {winMode && winModView}
         </div>

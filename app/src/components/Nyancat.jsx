@@ -24,7 +24,7 @@ const Nyancat = () => {
 
     return ( 
         <div className={isAdmin && 'admin'} >
-            {gameoptions.nyancat && (
+            {gameoptions?.nyancat && (
                 <div className="nyan-cat show">
                     <img src={cat} alt="" />
                 </div>
