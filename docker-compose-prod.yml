@@ -41,10 +41,8 @@ services:
     ports:
       - '9000:9000'
     depends_on:
-      database:
-        condition: service_started
-      mercure: 
-        condition: service_started
+      - database
+      - mercure
     restart: on-failure
   nodejs:
     build: 
