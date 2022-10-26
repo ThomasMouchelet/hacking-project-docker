@@ -97,10 +97,6 @@ class StudentFixtures extends Fixture
             'lastName' => "SOULAN",
         ],
         'student22' => [
-            'firstName' => "Sandrine",
-            'lastName' => "TEIXIER",
-        ],
-        'student23' => [
             'firstName' => "Manon",
             'lastName' => "VETAULT",
         ]

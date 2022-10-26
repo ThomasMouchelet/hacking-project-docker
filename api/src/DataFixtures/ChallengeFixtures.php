@@ -14,14 +14,14 @@ class ChallengeFixtures extends Fixture
             'name' => "L'observation",
             'answer' => "0",
             'description' => "Bonjour {namingGame}
-                                <br><br>
-                                L'une des principales qualité d'un hackeur est l'observation. Avez-vous bien analysé l'ensemble du lieu où vous vous trouvez ?
-                                <br>
-                                Pour atteindre l'étape 2, vous devrez trouver et renseigner numéro dans le champs ci-dessous.
-                                <br><br>
-                                Voici un indice, mais ne vous y habituez pas.
-                                <br><br>
-                                <em>“Il vous faudra analyser les dessous du stade pour gagner la partie</em>",
+                <br><br>
+                L'une des principales qualité d'un hackeur est l'observation. Avez-vous bien analysé l'ensemble du lieu où vous vous trouvez ?
+                <br>
+                Pour atteindre l'étape 2, vous devrez trouver et renseigner numéro dans le champs ci-dessous.
+                <br><br>
+                Voici un indice, mais ne vous y habituez pas.
+                <br><br>
+                <em>“Il vous faudra analyser les dessous du stade pour gagner la partie</em>",
             'orderChallenge' => "1",
             'type' => 'student'
         ],
@@ -48,10 +48,22 @@ class ChallengeFixtures extends Fixture
             'type' => 'student'
         ],
         'challenge4' => [
+            'name' => "tnasrevneR",
+            'answer' => "264",
+            'description' => "
+                <audio
+                    controls
+                    src=\"http://sn.icri5960.odns.fr/reverse.mp3\">
+                </audio>
+            ",
+            'orderChallenge' => "4",
+            'type' => 'student'
+        ],
+        'challenge5' => [
             'name' => "Dev-joke",
             'answer' => "mrtdominera",
             'description' => "
-                <div id=\"MrTdominera\">
+                <div id=\"mrtdominera\">
                     Cher {namingGame}, j'espère que ces quelques aller-retours vous ont dégourdi les jambes. 
                     <br><br>
                     Au risque que cela vous semble répétitif, il est important d'avoir de la <em>.class</em>
@@ -59,10 +71,22 @@ class ChallengeFixtures extends Fixture
                     Mais la réponse que vous cherchez nécessite quelque chose de bien plus <em>#unique</em>
                 </div>
             ",
-            'orderChallenge' => "4",
+            'orderChallenge' => "5",
             'type' => 'student'
         ],
-        'challenge5' => [
+        'challenge6' => [
+            'name' => "Concaténation",
+            'answer' => "42",
+            'description' => "
+                <p>1 + 1= 2</p>
+                <p>2 * '3' = 6</p>
+                <p>'4' + '2' = ?</p>
+            ",
+            'orderChallenge' => "6",
+            'type' => 'student'
+        ],
+
+        'challenge7' => [
             'name' => "Pas mal",
             'answer' => "team",
             'description' => "
@@ -84,12 +108,12 @@ class ChallengeFixtures extends Fixture
                 <br><br>
                 <a href=\"/#/create_team\" id=\"link\" style=\"display: none;\" target=\"_blank\">C'est bien ici !</a>
             ",
-            'orderChallenge' => "5",
+            'orderChallenge' => "7",
             'type' => 'student'
         ],
-        'challenge6' => [
+        'challenge8' => [
             'name' => "WPA",
-            'answer' => "netgear-6-wpa3-2707",
+            'answer' => "espd_bo_r1_3",
             'description' => "
                 Eh bien, nous pouvons enfin commencer {namingGame} !
                 <br><br>
@@ -101,12 +125,12 @@ class ChallengeFixtures extends Fixture
                 Il s’est probablement connecté avec son ordinateur au réseau wifi. Sur certaines de ces bornes, il y a une référence d'inscrite.
                 <br>
                 Trouvez la borne et noter la référence. 
-                Elle nous permettra de parcourir des adresses IP.
+                Elle nous permettra de parcourir les adresses IP de l'école .
             ",
-            'orderChallenge' => "6",
+            'orderChallenge' => "8",
             'type' => 'team'
         ],
-        'challenge7' => [
+        'challenge9' => [
             'name' => "Trouver l'adresse IP",
             'answer' => "192.168.0.250",
             'description' => "
@@ -118,24 +142,29 @@ class ChallengeFixtures extends Fixture
                 <a href=\"http://meraki.icri5960.odns.fr\" id=\"link\" target=\"_blank\">meraki.icri5960.odns.fr</a>
 
             ",
-            'orderChallenge' => "7",
+            'orderChallenge' => "9",
             'type' => 'team'
         ],
-        'challenge8' => [
+        'challenge10' => [
             'name' => "Search and replace",
             'answer' => "thomas mouchelet",
             'description' => "
-                C’est bien cela, elle correspond avec celle que j’ai récupérée de mon côté. 
+                Après avoir intercepté certaines requêtes, j'ai pu récupérer des données cryptées.
+                <br>
+                Le peux que j'ai pu en déchiffrer, m'a donné des informations sur son agenda.
+                <br>
+                Il est indiqué qu'il est présent en salle 4 la semaine du 24 au 28 octobre.
                 <br>
                 Il faut que l’ont sache de qui il s’agit pour récolter des informations.
+                <br>
                 Envoiez moi son prénom et son nom.
                 <br>
                 Il faut fouiller l'école, peut être qu’il y a des indices.
             ",
-            'orderChallenge' => "8",
+            'orderChallenge' => "10",
             'type' => 'team'
         ],
-        'challenge9' => [
+        'challenge11' => [
             'name' => "Social engineering",
             'answer' => "18/07/1988",
             'description' => "
@@ -145,11 +174,13 @@ class ChallengeFixtures extends Fixture
                 <br><br>
                 Nous allons effectuer une attaque par dictionnaire, <br>
                 il nous faut des informations personnelles. Trouvez la date de naissance de Thomas Mouchelet.
+                <br>
+                jj/mm/AAAA
             ",
-            'orderChallenge' => "9",
+            'orderChallenge' => "11",
             'type' => 'team'
         ],
-        'challenge10' => [
+        'challenge12' => [
             'name' => "L'attaque des titans !",
             'answer' => "",
             'description' => "
@@ -159,7 +190,7 @@ class ChallengeFixtures extends Fixture
                 <br><br>
                 <a href=\"http://sn.icri5960.odns.fr/\" id=\"link\" target=\"_blank\">sn.icri5960.odns.fr/</a>
             ",
-            'orderChallenge' => "10",
+            'orderChallenge' => "12",
             'type' => 'team'
         ],
     ];
