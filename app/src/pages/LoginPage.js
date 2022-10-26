@@ -65,7 +65,7 @@ const LoginPage = () => {
         <div className="window login-page">
             <form onSubmit={handleSubmit} className="terminal">
                 <input
-                    type="text" placeholder="username"
+                    type="text"
                     onChange={handleChange}
                     value={credentials.username}
                     name="username"

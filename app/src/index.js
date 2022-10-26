@@ -28,19 +28,27 @@ const App = () => {
         AuthAPI.setup();
         AuthAPI.isAuthenticated();
         fetTchatMessage();
-    }, [isAuthenticated])
+        console.log("useEffect test")
+    }, [])
+
+    // useEffect(() => {
+    //     fetTchatMessage();
+    // }, [isAuthenticated])
 
     const fetTchatMessage = async () => {
+        console.log("fetchTchatMessage")
         firebasedb.collection("tchat")
             .onSnapshot((snapshot) => {
                 let messages = []
+                console.log("messages")
                 snapshot.forEach(doc => {
                     const { message } = doc.data()
                     messages = [...messages, message]
-                    
+                    console.log(messages)
                 })
                 if (isAuthenticated) {
-                    toast.dark(messages[messages.length - 1], {
+                    console.log("messages isAuthenticated")
+                    toast(messages[messages.length - 1], {
                         position: "top-right",
                         autoClose: 5000,
                         hideProgressBar: false,
