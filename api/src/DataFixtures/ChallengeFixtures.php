@@ -152,7 +152,7 @@ class ChallengeFixtures extends Fixture
                 <br>
                 Le peux que j'ai pu en déchiffrer, m'a donné des informations sur son agenda.
                 <br>
-                Il est indiqué qu'il est présent en salle 4 la semaine du 24 au 28 octobre.
+                Il est indiqué qu'il est présent en <em>salle 4</em> la semaine du 24 au 28 octobre.
                 <br>
                 Il faut que l’ont sache de qui il s’agit pour récolter des informations.
                 <br>
@@ -172,9 +172,9 @@ class ChallengeFixtures extends Fixture
                 Restons discrets pour ne pas qu’il le découvre. Cela pourrait mettre en péril notre plan.
                 <br><br>
                 Nous allons effectuer une attaque par dictionnaire, <br>
-                il nous faut des informations personnelles. Trouvez la date de naissance de Thomas Mouchelet.
+                il nous faut des informations personnelles. Trouvez la <em>date de naissance</em> de Thomas Mouchelet.
                 <br>
-                jj/mm/AAAA
+                <em>jj/mm/AAAA</em>
             ",
             'orderChallenge' => "11",
             'type' => 'team'
@@ -185,7 +185,13 @@ class ChallengeFixtures extends Fixture
             'description' => "
                 Il nous faut plus d'informations. 
                 <br>
-                Je sais que Thomas Mouchelet a pratiqué un type de danse, découvrez laquelle.
+                Je sais que Thomas Mouchelet a pratiqué un type de danse et qu'il y a des vidéos.
+                <br>
+                <br>
+                <em>Trouvez le nom de la danse qu'il a pratiqué.</em>
+                <br>
+                <br>
+                Pour cela il vous faut récupérer son pseudo afin de trouver la chaine Youtube relié aux vidéos.
             ",
             'orderChallenge' => "12",
             'type' => 'team'
@@ -196,7 +202,7 @@ class ChallengeFixtures extends Fixture
             'description' => "
                 Je ne regrette pas de vous avoir recruté ! On va maintenant passer à l’attaque !
                 <br><br>
-                Avec son ancien pseudo, le nom de cette danse et sa date de naissance, nous pouvons maintenant lancer l’attaque.
+                Avec son ancien pseudo, le nom de cette danse et sa date de naissance, nous pouvons maintenant lancer l’attaque pour accéder à l'espace administrateur.
                 <br><br>
                 <a href=\"http://sn.icri5960.odns.fr/\" id=\"link\" target=\"_blank\">sn.icri5960.odns.fr/</a>
             ",
