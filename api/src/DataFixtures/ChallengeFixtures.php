@@ -185,7 +185,7 @@ class ChallengeFixtures extends Fixture
             'description' => "
                 Il nous faut plus d'informations. 
                 <br>
-                Je sais Thomas Mouchelet a pratiqué un type de danse, découvrez laquelle.
+                Je sais que Thomas Mouchelet a pratiqué un type de danse, découvrez laquelle.
             ",
             'orderChallenge' => "12",
             'type' => 'team'
