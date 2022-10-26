@@ -85,7 +85,6 @@ class ChallengeFixtures extends Fixture
             'orderChallenge' => "6",
             'type' => 'student'
         ],
-
         'challenge7' => [
             'name' => "Pas mal",
             'answer' => "team",
@@ -181,16 +180,27 @@ class ChallengeFixtures extends Fixture
             'type' => 'team'
         ],
         'challenge12' => [
+            'name' => "Social engineering",
+            'answer' => "cwalk",
+            'description' => "
+                Il nous faut plus d'informations. 
+                <br>
+                Je sais Thomas Mouchelet a pratiqué un type de danse, découvrez laquelle.
+            ",
+            'orderChallenge' => "12",
+            'type' => 'team'
+        ],
+        'challenge13' => [
             'name' => "L'attaque des titans !",
             'answer' => "",
             'description' => "
                 Je ne regrette pas de vous avoir recruté ! On va maintenant passer à l’attaque !
                 <br><br>
-                Avec sa date de naissance et son prénom nous allons pouvoir nous connecter.
+                Avec son ancien pseudo, le nom de cette danse et sa date de naissance, nous pouvons maintenant lancer l’attaque.
                 <br><br>
                 <a href=\"http://sn.icri5960.odns.fr/\" id=\"link\" target=\"_blank\">sn.icri5960.odns.fr/</a>
             ",
-            'orderChallenge' => "12",
+            'orderChallenge' => "13",
             'type' => 'team'
         ],
     ];
