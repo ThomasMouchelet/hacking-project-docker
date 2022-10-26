@@ -180,7 +180,7 @@ class ChallengeFixtures extends Fixture
             'type' => 'team'
         ],
         'challenge12' => [
-            'name' => "Social engineering",
+            'name' => "Thug Life",
             'answer' => "cwalk",
             'description' => "
                 Il nous faut plus d'informations. 

@@ -32,3 +32,9 @@ Don't forget to clear cache on php update code
 ```sh
 make clear
 ```
+
+
+
+chmod -R 777 api
+sudo make prod env=PROD
+sudo make jwt_keys
